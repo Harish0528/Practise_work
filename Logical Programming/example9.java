@@ -1,3 +1,4 @@
+//9. Write a java program to input any character and check whether it is alphabet, digit    or special character.
 import java.util.Scanner;
 public class example9 {
 	public static void main(String[] args) {
