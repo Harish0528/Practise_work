@@ -1,3 +1,4 @@
+//5. Write a java program to check whether a number is even or odd.
 import java.util.Scanner;
 public class example5 {
 	public static void main(String[] args) {
