@@ -25,9 +25,14 @@ public class JobsController {
 	private JobsServiceInterface jsi;
 	
 	@PostMapping("/saveJobDetails")
-	public boolean saveJob(@Valid @RequestBody Jobs job)
+	public ResponseEntity<Object> saveJob(@Valid @RequestBody Jobs job)
 	{
-		return jsi.saveJobData(job);
+		boolean b= jsi.saveJobData(job);
+		
+		if(b==true)
+			return ResponseHandler.generateResponse("job saved successfully", HttpStatus.OK,b);
+		else
+			return ResponseHandler.generateResponse("job not saved", HttpStatus.BAD_REQUEST,b);
 	}
 	
 	@GetMapping("/viewAllJobDetails")
