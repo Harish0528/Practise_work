@@ -25,6 +25,9 @@ public class Jobs {
 	private Date startdate;
 	private Date enddate;
 	private String starttime;
+	private int created_by=1;
+	private int duration;
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	private java.util.Date created_at;
 	public java.util.Date getCreated_at() {
@@ -35,8 +38,7 @@ public class Jobs {
 		this.created_at = created_at;
 	}
 
-	private int created_by;
-	private int duration;
+	
 	
 	@PrePersist
 	public void oncreate() {
